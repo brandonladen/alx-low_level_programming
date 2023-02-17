@@ -1,15 +1,18 @@
 #include <stdio.h>
-#include <string.h>
 /**
- * main - A program to print alphabets
- * Return: 0
+ * main - entry point
+ *
+ * Return: alway returns 0
+ *
  */
 int main(void)
 {
-int i, j;
-for (i = 0; i <= 90; i++)
+int i;
+int j;
+
+for (i = 10; i <= 19; i++)
 {
-for(j = 10; j <= 19; j++)
+for (j = 10; j <= 19; j++)
 {
 if ((j % 10) > (i % 10))
 {
