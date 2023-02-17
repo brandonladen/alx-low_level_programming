@@ -6,11 +6,16 @@
  */
 int main(void)
 {
-char *alphabets = "0, 1, 2, 3, 4, 5, 6, 7, 8, 9\n";
-size_t i;
-for (i = 0; i < strlen(alphabets); i++)
+int i;
+for (i = 0; i < 10; i++)
 {
-putchar(alphabets[i]);
+putchar(i + '0');
+if (i < 9)
+{
+putchar(',');
+putchar(' ');
 }
+}
+putchar('\n');
 return (0);
 }
