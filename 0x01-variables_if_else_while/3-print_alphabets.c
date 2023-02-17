@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-char *alphabets = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ$\n";
+char *alphabets = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ\n";
 size_t i;
 for (i = 0; i < strlen(alphabets); i++)
 {
