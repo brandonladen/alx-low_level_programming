@@ -6,8 +6,9 @@
  */
 int main(void)
 {
+int 1;
 char *alphabets = "abcdefghijklmnopqrstuvwxyz\n";
-for (int i = 0; i < strlen(alphabets); i++)
+for (i = 0; i < strlen(alphabets); i++)
 {
 putchar(alphabets[i]);
 }
