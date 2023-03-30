@@ -3,36 +3,34 @@
 #include <string.h>
 #include "lists.h"
 /**
- * add_node - A function that adds a new node at the beginning of a list_t list
- * @head: A pointer to nulll address
- * @str: String to be printed
- * Return: Address of the new element
- */
+* add_node - A function that adds a new node at the beginning of a list_t list
+* @head: A pointer to nulll address
+* @str: String to be printed
+* Return: Address of the new element
+*/
 list_t *add_node(list_t **head, const char *str)
 {
-	ist_t *new;
+	list_t *new_node;
 
-	if (str == NULL)
+	if (str == NULL || head == NULL)
 	{
-		return NULL;
+		return (NULL);
 	}
 
-	new = malloc(sizeof(list_t));
-
-	if (new == NULL)
+	new_node = malloc(sizeof(list_t));
+	if (new_node == NULL)
 	{
-		return NULL;
+		return (NULL);
 	}
-	new->str = strdup(str);
-	new->len = strlen(str);
 
-	if (head = NULL)
+	new_node->str = strdup(str);
+	if (new_node->str == NULL)
 	{
-		head = new;
+		free(new_node);
+		return (NULL);
 	}
-	head->next = new;
-	new->next = 0;
-
-	printf("[%d] %s\n", new->len, new->str);
-	return (new);
+	new_node->len = strlen(str);
+	new_node->next = *head;
+	*head = new_node;
+	return (new_node);
 }
