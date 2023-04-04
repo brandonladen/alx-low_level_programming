@@ -12,3 +12,4 @@ C - More singly linked lists
 		7-get_nodeint.c - A function that returns the nth node of a listint_t linked list.
 		8-sum_listint.c - A fuction that returns the sum of all data in linked list
 		9-insert_nodeint.c - A function that inserts a new node at a given position
+		10-delete_nodeint.c - A function that deletes the node at index index of a listint_t linked list.
