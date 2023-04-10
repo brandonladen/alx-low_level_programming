@@ -4,7 +4,7 @@
 #include <string.h>
 #include "main.h"
 /**
- * read_textfile - A fuction that reads a text file and prints it 
+ * read_textfile - A function that reads textfile and writes
  * @filename: Name of the file to be accessed
  * @letters: The number of letters t should read and print
  * Return: The actual number of letters it should read and print
@@ -27,12 +27,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		return (0);
 	}
-	
 	while (fgets(ch, sizeof(ch), fp) != NULL && len < letters)
 	{
 		printf("%s", ch);
 		len += strlen(ch);
-		
 	}
 	fclose(fp);
 
