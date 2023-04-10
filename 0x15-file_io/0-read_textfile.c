@@ -13,7 +13,7 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	size_t len;
+	size_t len = 0;
 	FILE *fp;
 	char ch[1024];
 
@@ -32,6 +32,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		printf("%s", ch);
 		len += strlen(ch);
+		
 	}
 	fclose(fp);
 
