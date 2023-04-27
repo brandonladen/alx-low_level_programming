@@ -3,7 +3,7 @@
 #include <string.h>
 #include "main.h"
 /**
- * binary_to_uinit - A function converts binary to an unsigned int
+ * binary_to_uint - A function converts binary to an unsigned int
  * @b: A pointer pointing to a string of 0 and 1 chars
  * Return: The converted number, or 0
  * Author : BRANDON ODHIAMBO
