@@ -19,7 +19,7 @@ void close_elf(int elf);
 
 /**
  * check - A function that checks if a file is an ELF file.
- * @e_ident: A pointer to an array 
+ * @ident: A pointer to an array
  * Return: void
  */
 void check(unsigned char *ident)
@@ -60,7 +60,7 @@ void print_magic(unsigned char *ident)
 
 /**
  * print_class - A function that prints the class of an ELF header.
- * @ident: A pointer to an array 
+ * @ident: A pointer to an array
  * Return: void
  */
 void print_class(unsigned char *ident)
@@ -85,7 +85,7 @@ void print_class(unsigned char *ident)
 
 /**
  * print_data - A function that prints the data of an ELF header.
- * @ident: A pointer to an array 
+ * @ident: A pointer to an array
  * Return: void
  */
 void print_data(unsigned char *ident)
@@ -131,7 +131,7 @@ void print_version(unsigned char *ident)
 
 /**
  * print_osabi - A function that prints the OS/ABI of an ELF header.
- * @ident: A pointer to an array 
+ * @ident: A pointer to an array
  * Return: void
  */
 void print_osabi(unsigned char *ident)
@@ -177,7 +177,7 @@ void print_osabi(unsigned char *ident)
 
 /**
  * print_abi - A function that prints the ABI version of an ELF header.
- * @ident: A pointer to an array 
+ * @ident: A pointer to an array
  * Return: void
  */
 void print_abi(unsigned char *ident)
@@ -224,7 +224,7 @@ void print_type(unsigned int type, unsigned char *ident)
 /**
  * print_entry - This function prints the entry point of the ELF header.
  * @entry: An argument for entry
- * @ident: A pointer to an array 
+ * @ident: A pointer to an array
  */
 void print_entry(unsigned long int entry, unsigned char *ident)
 {
@@ -264,13 +264,13 @@ void close_elf(int elf)
  * @argc: A pointer to the number of arguments supplied to the program.
  * @argv: A pointer to an array of pointers to the arguments.
  *
- * Return: 0 
+ * Return: 0
  */
 int main(int __attribute__((__unused__)) argc, char *argv[])
 {
 	int x, y;
 	Elf64_Ehdr *head;
-	
+
 	x = open(argv[1], O_RDONLY);
 	if (x == -1)
 	{
