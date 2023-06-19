@@ -1,3 +1,5 @@
 *.c
 *.o
 liball.so
+_*
+100-tests.py
